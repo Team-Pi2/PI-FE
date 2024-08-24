@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: row;
     background-color: #D3B2D7;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 .topLogo {
-
+    text-align: center;
 }
