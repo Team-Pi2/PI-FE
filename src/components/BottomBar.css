@@ -1,0 +1,32 @@
+.BottomBar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+
+.BottomBarContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 68px;
+    text-align: center;
+}
+
+.BarMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.barImg {
+    width: 24px;
+    height: 24px;
+}
+
+.BarText {
+    font-weight: 500;
+}
