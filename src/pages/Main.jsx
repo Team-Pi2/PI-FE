@@ -17,7 +17,6 @@ const Main = () => {
         <div className='mainBtnOrder'><Link to='/order'>주문하기</Link></div>
       </div>
       <BottomBar />
-      {/* <img src={bgimg} alt='베경 이미지' /> */}
     </div>
   )
 }
