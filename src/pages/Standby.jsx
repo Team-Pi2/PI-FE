@@ -1,6 +1,7 @@
 import React from 'react'
 import TopBar from '../components/TopBar'
 import './Standby.css'
+import CardSwiper from '../components/CardSwiper'
 
 const Standby = () => {
   return (
@@ -13,7 +14,9 @@ const Standby = () => {
             </div>
             <div className='standbySub'>
                 <div className='standbySubTitle'>최근 판매된 꽃다발이에요</div>
-                <div className='standbySubContainer'></div>
+                <div className='standbySubContainer'>
+                    <CardSwiper />
+                </div>
             </div>
         </div>
     </div>
