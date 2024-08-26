@@ -16,3 +16,12 @@
     /* background-color: aqua; */
     display: grid;
 }
+
+.nonMessage{
+    font-size: 1rem;
+    /* background-color: aqua; */
+    display: flex;   
+    justify-content: center;
+    margin-top: 4rem;
+    /* background-color: white; */
+}
