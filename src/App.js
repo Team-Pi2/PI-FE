@@ -1,4 +1,4 @@
-import { BrowserRouter, useLocation, useMatch } from 'react-router-dom';
+import { useLocation, useMatch } from 'react-router-dom';
 import './App.css';
 import AppRoutes from './routes/AppRoutes';
 import TopBar from './components/TopBar';
