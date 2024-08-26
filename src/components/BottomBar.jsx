@@ -37,7 +37,7 @@ const BottomBar = () => {
         <div className={`BarMenu ${location.pathname === '/mypage' ? 'active' : ''}`}>
           <Link to='/mypage'>
             <div className='material-symbols-outlined barImg'>person</div>
-            <div className='BarText'>My</div>
+            <div className='BarText'>마이</div>
           </Link>
         </div>
       </div>
