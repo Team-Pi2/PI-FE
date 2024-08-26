@@ -15,14 +15,22 @@ const CardSwiper = () => {
 
     useEffect(() => {
         const mockData = [
-            {id: 1, imageUrl: flower1}, 
-            {id: 2, imageUrl: flower2}, 
-            {id: 3, imageUrl: flower1}, 
-            {id: 4, imageUrl: flower2}, 
-            {id: 5, imageUrl: flower2}, 
+            {id: 1, imageUrl: flower1, isLike: false}, 
+            {id: 2, imageUrl: flower2, isLike: false}, 
+            {id: 3, imageUrl: flower1, isLike: false}, 
+            {id: 4, imageUrl: flower2, isLike: false}, 
+            {id: 5, imageUrl: flower2, isLike: false}, 
         ]
         setCardList(mockData)
     }, [])
+
+    const likeToggle = (id) => {
+        setCardList(prevList => 
+            prevList.map(item =>
+                item.id === id ? {...item, isLike: !item.isLike} : item
+            )
+        )
+    }
 
   return (
     <Swiper
@@ -32,7 +40,7 @@ const CardSwiper = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-            delay: 3000,
+            delay: 2000,
             disableOnInteraction: false,
         }}
         slidesOffsetBefore={0} // 슬라이드 왼쪽 오프셋 조정
@@ -44,7 +52,12 @@ const CardSwiper = () => {
             <SwiperSlide key={index}>
                 <div className='flowerCard'>
                     <img src={item.imageUrl} alt={`Flower ${item.id}`} className='floweImg' />
-                    <div className='material-symbols-outlined cardIcon'>favorite</div>
+                    <div
+                        className={`material-symbols-outlined cardIcon ${item.isLike ? 'like' : ''}`}
+                        onClick={() => likeToggle(item.id)}
+                    >
+                        favorite
+                    </div>
                 </div>
             </SwiperSlide>
         ))}
