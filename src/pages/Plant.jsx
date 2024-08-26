@@ -16,7 +16,7 @@ const Plant = () => {
     const getPlantInfos = async (keyword = "") => {
         setLoading(true);
         try {
-            let url = `http://192.168.0.80:8080/api/plant`;
+            let url = `http://192.168.35.104:8080/api/plant`;
             if (keyword) {
                 url += `?name=${keyword}`;
             }

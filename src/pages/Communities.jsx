@@ -13,7 +13,7 @@ const Communities = () => {
     const getChatInfos = async (keyword = "") => {
         setLoading(true);
         try {
-            let url = `http://192.168.0.80:8080/api/chats?keyword=`;
+            let url = `http://192.168.35.104:8080/api/chats?keyword=`;
             if (keyword) {
                 url += `${keyword}`;
             }

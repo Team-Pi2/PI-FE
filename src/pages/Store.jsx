@@ -16,7 +16,7 @@ const Store = () => {
     const getStoreInfos = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://192.168.0.80:8080/api/orders?category=${selectedFilter}`, { method: 'GET' });
+            const response = await fetch(`http://192.168.35.104:8080/api/orders?category=${selectedFilter}`, { method: 'GET' });
             const json = await response.json(); // 응답을 JSON으로 변환
             setStoreInfos(json); // 상태를 업데이트
         } catch (error) {
