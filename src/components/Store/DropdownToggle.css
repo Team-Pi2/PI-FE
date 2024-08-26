@@ -1,0 +1,39 @@
+.dropdown-toggle {
+    position: relative;
+    display: inline-block;
+    width: 4rem; /* 버튼과 드롭다운의 고정 너비 설정 */
+}
+
+.dropdown-button {
+    width: 100%; /* 버튼이 드롭다운과 동일한 너비를 가지도록 설정 */
+    padding: 0.5rem 0.5rem;
+    font-size: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    text-align: center;
+    width: 100%; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.2rem;
+    padding: 0; /* ul의 패딩을 없애기 위해서 */
+    margin: 0; /* 버튼과 리스트 사이의 마진 제거*/
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.6rem;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}

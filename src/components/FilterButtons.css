@@ -1,0 +1,33 @@
+.filter-buttons-container {
+    /* overflow-x: auto;  */
+    white-space: nowrap; 
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem; /* 버튼 간격 */
+    margin-left: 1rem;
+
+}
+
+.filter-button {
+    padding: 0.5rem 1.1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.filter-button.active {
+    background-color: #333; /* 선택된 버튼 배경색 */
+    color: #fff; /* 선택된 버튼 텍스트 색 */
+}
+
+.checkmark {
+    margin-right: 0.5rem; /* 체크마크와 텍스트 간격 */
+}
