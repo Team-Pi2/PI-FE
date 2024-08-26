@@ -45,6 +45,7 @@ const Communities = () => {
                             {ChatCard.data.chatInfos.map((item) => (<ChatCard
                                 title={item.title}
                                 tags={item.tags}
+                                id = {item.id}
                                 author
                             />
                             ))}
