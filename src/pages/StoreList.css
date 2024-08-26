@@ -1,0 +1,19 @@
+.StoreList {
+    margin-top: rem;
+    display: grid;
+    place-items: center;
+    /* grid-template-columns : 10rem; */
+
+}
+
+.Message{
+    font-size: 1.3rem;
+    font-weight: 700;
+    /* background-color: aqua; */
+    display: flex;   
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+    /* background-color: white; */
+}

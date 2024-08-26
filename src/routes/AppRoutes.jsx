@@ -9,6 +9,7 @@ import Communities from '../pages/Communities'
 import Store from '../pages/Store'
 import Chat from '../pages/Chat'
 import Complete from '../pages/Complete'
+import StoreList from '../pages/StoreList'
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
             <Route path='/store/:id' element={<StoreDetail />} />
             <Route path='/communities' element={<Communities />} />
             <Route path='/communities/:id' element={<Chat />} />
+            <Route path='/storelist' element={<StoreList/>} />
         </Routes>
     </div>
   )
