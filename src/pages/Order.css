@@ -54,8 +54,8 @@
     text-align: center;
 }
 
-.orderMenuBtn.selction {
-    color: #D3B2D7;
+.orderMenuBtn.selected {
+    background-color: #D3B2D7;
 }
 
 .textarea {
