@@ -3,17 +3,18 @@ import { useNavigate } from "react-router-dom";
 import './SearchBar.css';
 import searchIcon from '../assets/searchIcon.png'; // 이미지 파일을 임포트
 
-function SearchBar() {
+function SearchBar({ onSearch }) {
     const [keyword, setKeyword] = useState("");
     const navigate = useNavigate();
 
     const onChange = (e) => setKeyword(e.target.value);
-    const [book, setBook] = useState([]);
     console.log(keyword);
 
-    const getFilteredBook = async () => {
+    const getFilteredBook = () => {
         // 검색 결과를 처리하는 함수
-        console.log("검색 결과");
+        if (keyword.trim() !== '') {
+            onSearch(keyword); // 부모 컴포넌트로 키워드 전달
+        }
     };
 
     const onKeyUp = (e) => {
@@ -28,7 +29,6 @@ function SearchBar() {
                 <input
                     className="SearchInput"
                     type="text"
-                    placeholder="식물 이름을 입력해주세요."
                     value={keyword}
                     onChange={onChange}
                     onKeyUp={onKeyUp}
