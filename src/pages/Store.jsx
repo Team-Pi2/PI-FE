@@ -64,7 +64,7 @@ const Store = () => {
                 <div className='store-cards'>
                     {filteredStores.map((item) => (
                         <StoreCard
-                            key={item.id}
+                            id={item.id}
                             title={item.title}
                             price={item.price}
                             name={item.name}
