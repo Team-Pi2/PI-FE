@@ -9,11 +9,19 @@ function App() {
   const currentLocation = useLocation();
   const isCommunitiesPage = useMatch('/communities/:id');
 
+  const isOrderPage = currentLocation.pathname === '/order';
+  const isStandbyPage = currentLocation.pathname.startsWith('/standby');
+  const isCompletePage = currentLocation.pathname.startsWith('/complete');
+
+  // 조건에 맞게 BottomBar를 렌더링하지 않도록 설정
+  const showBottomBar = !isCommunitiesPage && !isOrderPage && !isStandbyPage && !isCompletePage;
+  const showTopBar = !isCommunitiesPage;
+
   return (
     <div className="App">
-      {!isCommunitiesPage && <BottomBar />}
-      {!isCommunitiesPage && <TopBar />}
-      <div className='app-routes' >
+      {showTopBar && <TopBar />}
+      {showBottomBar && <BottomBar />}
+      <div className='app-routes'>
         <AppRoutes />
       </div>
     </div>

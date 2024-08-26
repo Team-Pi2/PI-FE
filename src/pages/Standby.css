@@ -22,7 +22,6 @@
     align-items: center;
     text-align: center;
     position: relative;
-    margin-top: 65px;
 }
 
 .standbyContainer::before {
