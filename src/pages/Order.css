@@ -10,7 +10,7 @@
 
 .orderContainer {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     flex: 1;
     overflow-y: auto;
     display: flex;
@@ -28,8 +28,10 @@
 .orderQ {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
+    font-size: 17px;
+    margin-bottom: 17px;
     white-space: pre;
+
 }
 
 .qBold {
@@ -58,9 +60,8 @@
     background-color: #FFCDCD;
 }
 
-.textarea {
-    width: 100%;
-    height: 60px;
+.inputPrice {
+    width: 95%;
     border-radius: 10px;
     border: 1px solid #B3B3B3;
     padding: 8px;
@@ -79,5 +80,5 @@
     color: #383838;
     font-weight:700;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
 }

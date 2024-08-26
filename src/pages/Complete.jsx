@@ -79,8 +79,8 @@ const Complete = () => {
         </div>
         
         <div className='completeBtnContainer'>
-            <div className='btnM' onClick={handleNew}>새로 만들기</div>
-            <div className='btnM' onClick={handleRequest}>제작 요청하기</div>
+            <div className='btnM new' onClick={handleNew}>새로 만들기</div>
+            <div className='btnM request' onClick={handleRequest}>제작 요청하기</div>
         </div>
     </div>
   )
