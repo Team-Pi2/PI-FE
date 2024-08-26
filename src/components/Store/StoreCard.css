@@ -1,0 +1,56 @@
+.store-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    /* background-color: antiquewhite; */
+}
+
+.store-image {
+    width: 6rem;
+    height: 7.5rem;
+    /* border-radius: 0.5rem; */
+    margin-right: 1rem;
+    object-fit: cover;
+    background-color: aqua;
+}
+
+.store{
+    margin-left: 0.7rem;
+}
+
+.store-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.store-name {
+    font-size: 0.8rem;
+    color: #a7a7a7;
+}
+
+.store-price {
+    margin-top: 0.5rem;
+
+    font-size: 1rem;
+    color: #4a4a4a;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.store-price::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 0.4rem; 
+    background-color: #E0BBE4; 
+    z-index: -1; 
+}
+
+.store-details {
+    font-size: 0.8rem;
+    color: #4a4a4a;
+    margin-top: 0.2rem;
+}

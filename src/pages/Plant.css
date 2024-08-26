@@ -1,0 +1,13 @@
+.Plant {
+}
+
+.filter-button {
+    margin-top: 1rem;
+}
+
+.dropDown{
+    margin: 0.2rem 0.5rem 0 0 ;
+    display: flex;
+    justify-content: right;
+    /* background-color: aqua; */
+}

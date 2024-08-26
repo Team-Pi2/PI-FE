@@ -1,0 +1,32 @@
+.SearchBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15rem;
+    height: 2.8em;
+    border-radius: 3em;
+    background-color: #fff;
+    border: 0.05rem solid ;
+    padding : 0 1rem 0 1rem;
+}
+
+.SearchInput {
+    font-size: 1em;
+    background: aqua;
+    width:85%;
+    border: none;
+    /* -webkit-appearance: none; */
+    &:focus {
+        outline: none;
+        cursor: text;
+    };
+}
+
+.SearchButton {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
