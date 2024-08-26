@@ -14,7 +14,6 @@ const Main = () => {
 
   return (
     <div className='Main'>
-      <TopBar />
       <div className='mainContainer'>
         <div className='mainText'>
           <div className='mainTitle'>맞춤형 꽃다발 서비스</div>
@@ -22,7 +21,6 @@ const Main = () => {
         </div>
         <div className='mainBtnOrder' onClick={handleOrder}>주문하기</div>
       </div>
-      <BottomBar />
     </div>
   )
 }

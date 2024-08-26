@@ -7,9 +7,9 @@ import Plant from '../pages/Plant'
 import StoreDetail from '../pages/StoreDetail'
 import Communities from '../pages/Communities'
 import Store from '../pages/Store'
-import Chat
- from '../pages/Chat'
+import Chat from '../pages/Chat'
 import Complete from '../pages/Complete'
+
 const AppRoutes = () => {
   return (
     <div className='AppRoutes'>
@@ -20,9 +20,9 @@ const AppRoutes = () => {
             <Route path='/complete' element={<Complete />} />
             <Route path='/plants' element={<Plant />} />
             <Route path='/store' element={<Store />} />
-            <Route path='/store-detail' element={<StoreDetail />} />
+            <Route path='/store/:id' element={<StoreDetail />} />
             <Route path='/communities' element={<Communities />} />
-            <Route path='/chat' element={<Chat />} />
+            <Route path='/communities/:id' element={<Chat />} />
         </Routes>
     </div>
   )

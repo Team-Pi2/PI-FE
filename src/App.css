@@ -2,3 +2,7 @@ a {
     text-decoration: none; 
     color: inherit;
   }
+
+.app-routes {
+  margin-top: 65px;
+}

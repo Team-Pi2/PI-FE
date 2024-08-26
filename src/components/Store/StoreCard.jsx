@@ -1,9 +1,14 @@
 import React from 'react';
 import './StoreCard.css';
+import { useNavigate } from "react-router-dom";
 
-const StoreCard = ({title="title", name="name", price="7000", script="info"}) => {
+const StoreCard = ({title="title", name="name", price="7000", script="info", id=1}) => {
+    const navigate = useNavigate();
+    const onClick  = () => {
+        navigate(`/store/${id}`)
+    }
     return (
-        <div className="store-card">
+        <div className="store-card" onClick={onClick}>
             <img src="" alt="판매이미지" className="store-image" />
             <div className="store">
                 <div className="store-title">{title}</div>

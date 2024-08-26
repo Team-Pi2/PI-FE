@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import ChatBubble from '../components/Community/Chat/ChatBubble';
+import { useNavigate } from "react-router-dom";
+
 import './Chat.css';
 
 const Chat = () => {
+
+    const navigate = useNavigate();
     const [messages, setMessages] = useState([
         { text: '꽃꽂이를 하고 싶은데 무슨 꽃으로 할까요?', isUser: true, name: 'User' },
         { text: '저는 국화를 좋아해요!', isUser: false, name: '지유' },
@@ -24,10 +28,14 @@ const Chat = () => {
         }
     };
 
+    const handleBack = () => {
+        navigate(`/communities`);
+      };
+
     return (
         <div className="chat-screen">
             <div className="chat-header">
-                <button className="back-button">←</button>
+                <button className="back-button" onClick={handleBack}>←</button>
                 플로리스트가 될래요
                 <button className="more-button">⋮</button>
             </div>
