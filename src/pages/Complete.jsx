@@ -20,7 +20,9 @@ const Complete = () => {
     }
 
     const handleRequest = () => {
-        navigate('/communities/:id')
+        navigate('/communities/chatorder')
+        // navigate('/communities/:id')
+        
     }
 
 
