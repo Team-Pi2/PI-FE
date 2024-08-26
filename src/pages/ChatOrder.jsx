@@ -30,7 +30,7 @@ const ChatOrder = () => {
     };
 
     const handleBack = () => {
-        navigate(`/communities`);
+        navigate(`/`);
       };
 
     return (
