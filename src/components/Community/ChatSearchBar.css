@@ -1,6 +1,5 @@
 .SearchBar{
     margin-top: 1rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +13,7 @@
 
 .SearchInput {
     font-size: 1em;
-    background: aqua;
+    /* background: aqua; */
     width:85%;
     border: none;
     /* -webkit-appearance: none; */
