@@ -15,6 +15,7 @@
 .store-cards {
     /* background-color: aqua; */
     display: grid;
+    margin-left: 2rem;
 }
 
 .nonMessage{

@@ -8,15 +8,11 @@ const Chat = () => {
 
     const navigate = useNavigate();
     const [messages, setMessages] = useState([
-        { text: '꽃꽂이를 하고 싶은데 무슨 꽃으로 할까요?', isUser: true, name: 'User' },
-        { text: '저는 국화를 좋아해요!', isUser: false, name: '지유' },
-        { text: '장미 추천합니다!', isUser: false, name: '현솔' },
-        { text: '옥잠화는 어때요?', isUser: false, name: '종민' },
-        { text: '다 조합해서 해볼게요!', isUser: true, name: 'User' },
-        { text: '좋은 아이디어네요', isUser: false, name: '현솔' },
-        { text: '다 하면 사진 보내주세요~', isUser: false, name: '지유' },
-        { text: '기대돼요!', isUser: false, name: '지유' },
-        { text: '감사해요! :)', isUser: true, name: 'User' },
+        { text: '오늘 장미 축제 가려고요!', isUser: true, name: 'User' },
+        { text: '부러워요 ㅠㅠ 저희 지역은 그런 게 없어서', isUser: false, name: '지유' },
+        { text: '저도 가고 싶네요', isUser: false, name: '현솔' },
+        { text: '저는 축제 기간 전에만 가려고요 ㅎㅎ', isUser: false, name: '종민' },
+        { text: 'ㅎㅎ 후기 남기겠습니다!', isUser: true, name: 'User' },
     ]);
 
     const [newMessage, setNewMessage] = useState('');
@@ -36,7 +32,7 @@ const Chat = () => {
         <div className="chat-screen">
             <div className="chat-header">
                 <button className="back-button" onClick={handleBack}>←</button>
-                플로리스트가 될래요
+                장미 사랑방
                 <button className="more-button">⋮</button>
             </div>
             <div className="chat-body">

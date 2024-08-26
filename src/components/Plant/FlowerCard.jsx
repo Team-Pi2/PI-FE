@@ -4,7 +4,7 @@ import './FlowerCard.css';
 const FlowerCard = ({id, title="1", age="1", water="1", env=""}) => {
     return (
         <div className="flower-card">
-            <img src="" alt="꽃 이미지" className="flower-image" />
+            <img src={`/mock/${title}.jpeg`} alt="꽃 이미지" className="flower-image" />
             <div className="flower">
                 <div className="flower-title">{title}</div>
                 <div className="flower-details">
