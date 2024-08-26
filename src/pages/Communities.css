@@ -1,5 +1,14 @@
 .chatCards {
-    margin-top: 1rem;
-    display: grid;
+    margin-top: 2rem;
+    /* display: grid; */
     place-items: center;
+
+}
+
+.nonMessage{
+    font-size: 1rem;
+    display: flex;   
+    justify-content: center;
+    margin-top: 4rem;
+    /* background-color: white; */
 }

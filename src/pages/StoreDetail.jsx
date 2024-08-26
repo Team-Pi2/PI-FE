@@ -14,7 +14,11 @@ const StoreDetail = () => {
     return (
         <div className="store-detail">
             <div className='infos'>
-                <StoreDetailCard></StoreDetailCard>
+                <StoreDetailCard
+                    title = "씨앗"
+                    name = "스토어 이름"
+                    price = "5000"
+                ></StoreDetailCard>
                 <div className='store-detail-detail'>
                     설명
                 </div>
