@@ -9,21 +9,27 @@ const BottomBar = () => {
       <div className='BottomBarContainer'>
         <div className='BarMenu'>
           <Link to='/'>
-            <img src={BarImg} alt='main' className='barImg' />
-            <div className='BarText'>Main</div>
+            <div className='material-symbols-outlined barImg'>deceased</div>
+            <div className='BarText'>Florist</div>
           </Link>
         </div>
         <div className='BarMenu'>
-          <img src={BarImg} alt='plant' className='barImg'  />
-          <div className='BarText'>Plant</div>
+          <Link to='/plants'>
+            <div className='material-symbols-outlined barImg'>import_contacts</div>
+            <div className='BarText'>Planting</div>
+          </Link>
         </div>
         <div className='BarMenu'>
-          <img src={BarImg} alt='store' className='barImg'  />
-          <div className='BarText'>Store</div>
+          <Link to='/store'>
+            <div className='material-symbols-outlined barImg'>storefront</div>
+            <div className='BarText'>Store</div>
+          </Link>
         </div>
         <div className='BarMenu'>
-          <img src={BarImg} alt='talk' className='barImg'  />
-          <div className='BarText'>Talk</div>
+          <Link to='/communities'>
+            <div className='material-symbols-outlined barImg'>forum</div>
+            <div className='BarText'>Chat</div>
+          </Link>
         </div>
       </div>
     </div>
