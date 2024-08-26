@@ -9,6 +9,7 @@ import Communities from '../pages/Communities'
 import Store from '../pages/Store'
 import Chat
  from '../pages/Chat'
+import Complete from '../pages/Complete'
 const AppRoutes = () => {
   return (
     <div className='AppRoutes'>
@@ -16,6 +17,7 @@ const AppRoutes = () => {
             <Route path='/' element={<Main />} />
             <Route path='/order' element={<Order />} />
             <Route path='/standby' element={<Standby />} />
+            <Route path='/complete' element={<Complete />} />
             <Route path='/plants' element={<Plant />} />
             <Route path='/store' element={<Store />} />
             <Route path='/store-detail' element={<StoreDetail />} />
