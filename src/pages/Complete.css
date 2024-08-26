@@ -73,6 +73,18 @@
 
 }
 
+.completeSubPriceContainer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.completeSubPriceContainer.open {
+    max-height: 200px;
+    opacity: 1;
+}
+
 .completeSubPriceTitle {
     margin-bottom: 8px;
     font-weight: bold;
