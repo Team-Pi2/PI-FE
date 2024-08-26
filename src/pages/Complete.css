@@ -1,44 +1,106 @@
 .Complete {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .completeTitle {
     font-weight: bold;
     font-size: 23px;
+    margin-top: 90px;
+    margin-bottom: 25px;
 }
 
 .completePhoto {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
 
+.completePhotoFlower {
+    width: 100%;
 }
 
 .photoFavIcon {
-    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    ;
+    color: #F3F3F3;
+    z-index: 2;
+}
+
+.completePredictContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .completePriceTitle {
-
+    font-weight: bold;
+    font-size: 22px;
 }
 
-.completePriceContainer {
-
+.completePriceToggle {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
 }
 
 .priceIcon {
+    font-size: 20px;
+    margin-right: 5px;
+}
 
+.priceIcon.open {
+    transform: rotate(90deg);
 }
 
 .completePrice {
 
 }
 
-.completeSubPrice {
+.completeSubPriceTitle {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.completeSubPriceBody {
 
 }
 
 .completeBtnContainer {
-
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 110px;
 }
 
 .btnM {
-
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3B2D7;
+    color: #383838;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    margin: 10px;
 }
