@@ -15,12 +15,12 @@ const StoreDetail = () => {
         <div className="store-detail">
             <div className='infos'>
                 <StoreDetailCard
-                    title = "씨앗"
-                    name = "스토어 이름"
-                    price = "5000"
+                    title = "레드 로즈 부케"
+                    name = "로즈팜"
+                    price = "45000"
                 ></StoreDetailCard>
                 <div className='store-detail-detail'>
-                    설명
+                    사랑을 전하는 레드 로즈 부케입니다.
                 </div>
             </div>
         </div>

@@ -29,7 +29,7 @@ const ChatCard = ({ title, member, tags, img, id }) => {
                     ))}
                 </div>
             </div>
-            <img src={`/mock/chat${id}.jpg`} alt="플로리스트" className="card-image" />
+            <img src={`/mock/${title}.jpeg`} alt="플로리스트" className="card-image" />
         </div>
     );
 };

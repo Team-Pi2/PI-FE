@@ -5,7 +5,7 @@ import './StoreDetailCard.css';
 const StoreCard = ({title, id, name, price}) => {
     return (
         <div className="store-detail-card">
-            <img src={`/mock/seed1.jpg`} alt="판매이미지" className="store-detail-image" />
+            <img src={`/mock/레드 로즈 부케.jpeg`} alt="판매이미지" className="store-detail-image" />
             <div className="store-detail-info">
                 <div>
                     <div className="store-detail-title">{title}</div>
