@@ -2,6 +2,7 @@ import React from 'react'
 import TopBar from '../components/TopBar'
 import './Standby.css'
 import CardSwiper from '../components/CardSwiper'
+import { Link } from 'react-router-dom'
 
 const Standby = () => {
   return (
@@ -13,7 +14,7 @@ const Standby = () => {
                 <div className='standbyDescription'>잠시만 기다려주세요</div>
             </div>
             <div className='standbySub'>
-                <div className='standbySubTitle'>최근 판매된 꽃다발이에요</div>
+                <div className='standbySubTitle'><Link to='/complete'>최근 판매된 꽃다발이에요</Link></div>
                 <div className='standbySubContainer'>
                     <CardSwiper />
                 </div>
