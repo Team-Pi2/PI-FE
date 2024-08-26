@@ -9,14 +9,28 @@
 .completeTitle {
     font-weight: bold;
     font-size: 23px;
-    margin-top: 90px;
-    margin-bottom: 25px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.completeTitle::before {
+    content: "";
+    position: absolute;
+    left: -6%;
+    top: 75%;
+    width: 110%;
+    height: 0.8rem;
+    background-color: #FFD8D8;
+    z-index: -1;
+    transform: translateY(-50%);
+    border-radius: 0.1rem;
 }
 
 .completePhoto {
     display: flex;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     position: relative;
 }
 
@@ -29,14 +43,15 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    margin-right: 12px;
+    margin-bottom: 8px;
     font-variation-settings:
         'FILL' 1,
         'wght' 400,
         'GRAD' 0,
         'opsz' 24
     ;
+    font-size: 35px;
     color: #F3F3F3;
     z-index: 2;
 }
@@ -51,7 +66,7 @@
 }
 
 .completePredictContainer {
-    margin-top: 50px;
+    margin-top: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +124,7 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 80px;
+    bottom: 40px;
 }
 
 .btnM {
@@ -119,11 +134,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: #FFCDCD;
+    align-items: center; 
     color: #383838;
     font-weight: bold;
     cursor: pointer;
     z-index: 2;
     margin: 10px;
+}
+
+.btnM.new {
+    background-color: #DEDEDE;
+}
+
+.btnM.request {
+    background-color: #FFCDCD;
 }
