@@ -10,7 +10,7 @@
 
 .orderContainer {
     width: 100%;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
     flex: 1;
     overflow-y: auto;
     display: flex;
@@ -80,5 +80,4 @@
     font-weight:700;
     cursor: pointer;
     margin-top: 20px;
-    margin-bottom: 50px;
 }
