@@ -1,4 +1,3 @@
-// Communities.js
 import React, { useState, useEffect } from 'react';
 import './StoreList.css';
 import StoreListCard from '../components/StoreList/StoreListCard';
