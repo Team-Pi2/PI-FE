@@ -1,11 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Complete.css'
-import flower2 from '../assets/flower2.png'
-import { useNavigate } from 'react-router-dom'
+import flower_mock1 from '../assets/flower_mock1.png'
+import flower_mock2 from '../assets/flower_mock2.png'
+import flower_mock3 from '../assets/flower_mock3.png'
+import flower_mock4 from '../assets/flower_mock4.png'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Complete = () => {
 
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const flowerImages = [flower_mock1, flower_mock2, flower_mock3, flower_mock4]
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    useEffect(() => {
+        if (location.state && location.state.randomIndex !== undefined) {
+            setCurrentIndex(location.state.randomIndex)
+        } else {
+            const randomIndex = Math.floor(Math.random() * flowerImages.length)
+            setCurrentIndex(randomIndex)
+        }
+    }, [location.state])
+
+
 
     const price = 50000
 
@@ -20,12 +38,15 @@ const Complete = () => {
         setIsLike(!isLike)
     }
 
+
     const handleNew = () => {
+        const randomIndex = Math.floor(Math.random() * flowerImages.length)
         navigate('/standby')
     }
+    
 
     const handleRequest = () => {
-        navigate('/communities/chatorder')
+        navigate('/storelist')
         
     }
 
@@ -34,7 +55,7 @@ const Complete = () => {
     <div className='Complete'>
         <div className='completeTitle'>꽃다발이 완성되었어요!</div>
         <div className='completePhoto'>
-            <img src={flower2} alt='꽃다발 완성본' className='completePhotoFlower' />
+            <img src={flowerImages[currentIndex]} alt='꽃다발 완성본' className='completePhotoFlower' />
             <div
                 className={`material-symbols-outlined photoFavIcon ${isLike ? 'like' : ''}`}
                 onClick={toggleLike}
