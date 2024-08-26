@@ -1,9 +1,16 @@
 import React from 'react'
 import TopBar from '../components/TopBar'
 import './Order.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Order = () => {
+
+    const navigate = useNavigate()
+
+    const handleSelect = () => {
+        navigate('/standby')
+    }
+
   return (
     <div className='Order'>
         <TopBar />
@@ -66,7 +73,7 @@ const Order = () => {
                     <textarea className='textarea' />
                 </div>
             </div>
-            <div className='BtnOrder'><Link to='/standby'>꽃다발 제작하기</Link></div>
+            <div className='BtnOrder' onClick={handleSelect}>꽃다발 제작하기</div>
         </div>
     </div>
   )
