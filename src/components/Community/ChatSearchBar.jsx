@@ -1,19 +1,21 @@
+// ChatSearchBar.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './ChatSearchBar.css';
 import searchIcon from '../../assets/searchIcon.png'; // 이미지 파일을 임포트
 
-function ChatSearchBar() {
+function ChatSearchBar({ onSearch }) {
     const [keyword, setKeyword] = useState("");
     const navigate = useNavigate();
 
     const onChange = (e) => setKeyword(e.target.value);
-    const [book, setBook] = useState([]);
     console.log(keyword);
 
-    const getFilteredBook = async () => {
+    const getFilteredBook = () => {
         // 검색 결과를 처리하는 함수
-        console.log("검색 결과");
+        if (keyword.trim() !== '') {
+            onSearch(keyword); // 부모 컴포넌트로 키워드를 전달
+        }
     };
 
     const onKeyUp = (e) => {
@@ -42,6 +44,6 @@ function ChatSearchBar() {
             </div>
         </div>
     );
-};
+}
 
 export default ChatSearchBar;

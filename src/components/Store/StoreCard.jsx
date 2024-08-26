@@ -9,7 +9,7 @@ const StoreCard = ({title="title", name="name", price="7000", script="info", id=
     }
     return (
         <div className="store-card" onClick={onClick}>
-            <img src="" alt="판매이미지" className="store-image" />
+            <img src={`/mock/seed${id}.jpg`} alt="판매이미지" className="store-image" />
             <div className="store">
                 <div className="store-title">{title}</div>
                 <div className='store-name'>{name}</div>

@@ -3,8 +3,14 @@ import React from 'react';
 import './ChatCard.css';
 import { useNavigate } from "react-router-dom";
 
+// import chat1 from "../../assets/mock/chat1.png"
+// import chat2 from "../../assets/mock/chat2.jpg"
+// import chat3 from "../../assets/mock/chat3.jpg"
+// import chat4 from "../../assets/mock/chat4.jpg"
 
-const ChatCard = ({ title='플로리스트가 될래요', member='150', tags=['꽃', '플로리스트'], img, id }) => {
+const ChatCard = ({ title, member, tags, img, id }) => {
+
+    console.log(title)
     const navigate = useNavigate();
     const onClick =()=> {
         navigate(`/communities/${id}`)
@@ -23,7 +29,7 @@ const ChatCard = ({ title='플로리스트가 될래요', member='150', tags=['�
                     ))}
                 </div>
             </div>
-            <img src="" alt="플로리스트" className="card-image" />
+            <img src={`/mock/chat${id}.jpg`} alt="플로리스트" className="card-image" />
         </div>
     );
 };
