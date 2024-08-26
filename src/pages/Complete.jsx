@@ -20,7 +20,9 @@ const Complete = () => {
     }
 
     const handleRequest = () => {
-        navigate('/communities/:id')
+        navigate('/communities/chatorder')
+        // navigate('/communities/:id')
+        
     }
 
 
@@ -38,13 +40,11 @@ const Complete = () => {
                     <span className={`material-symbols-outlined priceIcon ${isOpen ? 'open' : ''}`}>play_arrow</span>
                     <div className='completePrice'>{price}원</div>
                 </div>
-                {isOpen && (
-                        <div className='completeSubPriceContainer'>
-                            <div className='completeSubPriceTitle'>현재 꽃 시세</div>
-                            <div className='completeSubPriceBody'>튤립 5000원</div>
-                            <div className='completeSubPriceBody'>장미 3000원</div>
-                        </div>
-                    )}
+                <div className={`completeSubPriceContainer ${isOpen ? 'open' : ''}`}>
+                    <div className='completeSubPriceTitle'>현재 꽃 시세</div>
+                    <div className='completeSubPriceBody'>튤립 5000원</div>
+                    <div className='completeSubPriceBody'>장미 3000원</div>
+                </div>
             </div>
         </div>
         

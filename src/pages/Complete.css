@@ -52,6 +52,7 @@
 .completePriceTitle {
     font-weight: bold;
     font-size: 22px;
+    margin-bottom: 12px;
 }
 
 .completePriceToggle {
@@ -73,6 +74,18 @@
 
 }
 
+.completeSubPriceContainer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.completeSubPriceContainer.open {
+    max-height: 200px;
+    opacity: 1;
+}
+
 .completeSubPriceTitle {
     margin-bottom: 8px;
     font-weight: bold;
@@ -86,7 +99,7 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 110px;
+    bottom: 80px;
 }
 
 .btnM {
