@@ -1,26 +1,53 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Complete.css'
-import flower2 from '../assets/flower2.png'
-import { useNavigate } from 'react-router-dom'
+import flower_mock1 from '../assets/flower_mock1.png'
+import flower_mock2 from '../assets/flower_mock2.png'
+import flower_mock3 from '../assets/flower_mock3.png'
+import flower_mock4 from '../assets/flower_mock4.png'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Complete = () => {
 
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const flowerImages = [flower_mock1, flower_mock2, flower_mock3, flower_mock4]
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    useEffect(() => {
+        if (location.state && location.state.randomIndex !== undefined) {
+            setCurrentIndex(location.state.randomIndex)
+        } else {
+            const randomIndex = Math.floor(Math.random() * flowerImages.length)
+            setCurrentIndex(randomIndex)
+        }
+    }, [location.state])
+
+
 
     const price = 50000
 
     const [isOpen, setIsOpen] = useState(false)
+    const [isLike, setIsLike]= useState(false)
 
     const toggleDetail = () => {
         setIsOpen(!isOpen)
     }
 
-    const handleNew = () => {
-        navigate('/standby')
+    const toggleLike = () => {
+        setIsLike(!isLike)
     }
 
+
+    const handleNew = () => {
+        const randomIndex = Math.floor(Math.random() * flowerImages.length)
+        navigate('/standby')
+    }
+    
+
     const handleRequest = () => {
-        navigate('/communities/:id')
+        navigate('/storelist')
+        
     }
 
 
@@ -28,8 +55,13 @@ const Complete = () => {
     <div className='Complete'>
         <div className='completeTitle'>꽃다발이 완성되었어요!</div>
         <div className='completePhoto'>
-            <img src={flower2} alt='꽃다발 완성본' className='completePhotoFlower' />
-            <div className='material-symbols-outlined photoFavIcon'>favorite</div>
+            <img src={flowerImages[currentIndex]} alt='꽃다발 완성본' className='completePhotoFlower' />
+            <div
+                className={`material-symbols-outlined photoFavIcon ${isLike ? 'like' : ''}`}
+                onClick={toggleLike}
+            >
+                favorite
+            </div>
         </div>
         <div className='completePredictContainer'>
             <div className='completePriceTitle'>예상 가격</div>
@@ -38,13 +70,11 @@ const Complete = () => {
                     <span className={`material-symbols-outlined priceIcon ${isOpen ? 'open' : ''}`}>play_arrow</span>
                     <div className='completePrice'>{price}원</div>
                 </div>
-                {isOpen && (
-                        <div className='completeSubPriceContainer'>
-                            <div className='completeSubPriceTitle'>현재 꽃 시세</div>
-                            <div className='completeSubPriceBody'>튤립 5000원</div>
-                            <div className='completeSubPriceBody'>장미 3000원</div>
-                        </div>
-                    )}
+                <div className={`completeSubPriceContainer ${isOpen ? 'open' : ''}`}>
+                    <div className='completeSubPriceTitle'>현재 꽃 시세</div>
+                    <div className='completeSubPriceBody'>튤립 5000원</div>
+                    <div className='completeSubPriceBody'>장미 3000원</div>
+                </div>
             </div>
         </div>
         

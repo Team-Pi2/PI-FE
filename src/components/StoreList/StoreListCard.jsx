@@ -12,7 +12,7 @@ const StoreListCard = ({ name, number, address, id }) => {
 
     const navigate = useNavigate();
     const onClick =()=> {
-        navigate(`/communities/${id}`)
+        navigate(`/communities/chatorder`)
     }
     return (
         <div className="store-card">
